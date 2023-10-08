@@ -1,0 +1,47 @@
+{
+  "name": "fp-coffee",
+  "version": "1.0.0",
+  "description": "Functional utilities library for coffee/js",
+  "keywords": [
+    "functional programming",
+    "coffeescript",
+    "javascript",
+    "library",
+    "fp"
+  ],
+  "author": {
+    "name": "fxhxyz4",
+    "email": "fxhxyz@proton.me",
+    "url": "https://fxhxyz.vercel.app/"
+  },
+  "homepage": "https://github.com/fxhxyz4/fp-coffee",
+  "bugs": "https://github.com/fxhxyz4/fp-coffee/issues",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fxhxyz4/fp-coffee.git"
+  },
+  "maintainers": [
+    {
+      "name": "fxhxyz4",
+      "email": "fxhxyz@proton.me"
+    }
+  ],
+  "license": "MIT",
+  "scripts": {
+    "lint-config": "coffeelint --makeconfig > coffeelint.json",
+    "lint": "coffeelint -f coffeelint.json ./lib/*.coffee",
+    "prettier": "prettier ./lib/*.coffee --write",
+    "coffee-babel": "coffee --no-header --compile --transpile --inline-map ./lib/*.coffee",
+    "coffee-watch": "coffee --no-header --watch --compile ./lib/*.coffee",
+    "coffee-node": "coffee ./lib/main.coffee --node",
+    "test": "coffee ./examples/take.coffee"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.23.0",
+    "@babel/core": "7.23.0",
+    "@babel/preset-env": "7.22.20",
+    "@coffeelint/cli": "^5.2.11",
+    "coffeescript": "2.7.0",
+    "prettier-plugin-coffeescript": "^0.1.5"
+  }
+}
