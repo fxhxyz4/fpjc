@@ -1,7 +1,12 @@
 .github
 .vscode
 tests
+.babelrc
+.browserslistrc
 .editorconfig
 .gitattributes
 .gitignore
 .npmrc
+coffeelint.json
+contributed.md
+webpack.config.js
