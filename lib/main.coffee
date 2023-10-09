@@ -104,11 +104,98 @@ multiply = (v) ->
 divide = (v) ->
   basic v, (s, e) -> s / e
 
-power = (v) ->
-  basic v, (s, e) -> s ** e
+###
+  @param {Array} o - array
+  @returns {Array} - new array
+###
+power = (o) ->
+  s = o.slice()
+  return s.map((q) -> q ** 2)
 
-squareRoot = (v) ->
-  basic v, (s, e) -> Math.sqrt e
+###
+  @param {Array} w - array
+  @returns {Array} - new array
+###
+squareRoot = (w) ->
+  a = w.slice()
+  return a.map((e) -> Math.sqrt e)
+
+###
+  @private function
+  @param {Array} g - array
+  @param {Function} y - operation
+  @returns {Array} - new array
+###
+floorCeilRound = (g, y) ->
+  unless g instanceof Array
+    return err "Typeof: #{typeof g}"
+
+  c = new Array()
+
+  for f in g
+    unless typeof +f == 'number'
+      return 0
+    p = y f
+    c.push p
+
+  return c
+
+###
+  @param {Number} r - number
+  @returns {Number}
+###
+floor = (r) ->
+  return Math.floor r
+
+###
+  @param {Array} n - array
+  @returns {Array} - new array
+###
+floor2 = (n) ->
+  floorCeilRound n, (n) -> Math.floor n
+
+###
+  @param {Number} t - number
+  @returns {Number}
+###
+ceil = (t) ->
+  return Math.ceil t
+
+###
+  @param {Array} k - array
+  @returns {Array} - new array
+###
+ceil2 = (k) ->
+  floorCeilRound k, (k) -> Math.ceil k
+
+###
+  @param {Number} z - number
+  @returns {Number}
+###
+round = (z) ->
+  return Math.round z
+
+###
+  @param {Array} h - array
+  @returns {Array} - new array
+###
+round2 = (h) ->
+  floorCeilRound h, (h) -> Math.round h
+
+random1 = ->
+  return Math.floor Math.random() * 10
+
+random2 = ->
+  return Math.random() * 100
+
+random3 = ->
+  return Math.floor Math.random() * 100
+
+random4 = ->
+  return Math.random() * 1000
+
+random5 = ->
+  return Math.floor Math.random() * 1000
 
 module.exports =
   Array: {
@@ -127,4 +214,17 @@ module.exports =
     subtract
     multiply
     divide
+    power
+    squareRoot
+    floor
+    floor2
+    ceil
+    ceil2
+    round
+    round2
+    random1
+    random2
+    random3
+    random4
+    random5
   }
