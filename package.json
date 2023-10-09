@@ -34,7 +34,7 @@
     "coffee-babel": "coffee --no-header --compile --transpile --inline-map ./lib/*.coffee",
     "coffee-watch": "coffee --no-header --watch --compile ./lib/*.coffee",
     "coffee-node": "coffee ./lib/main.coffee --node",
-    "test": "coffee ./examples/take.coffee"
+    "test": "coffee ./examples/squareRoot.coffee"
   },
   "devDependencies": {
     "@babel/cli": "7.23.0",
