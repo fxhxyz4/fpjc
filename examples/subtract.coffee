@@ -1,6 +1,6 @@
-{ Math } = require '../lib/main'
+{ R } = require '../lib/main'
 
 array = [7, 4, 0, 8]
 
-console.log Math.subtract array
+console.log R.subtract array
 # -5

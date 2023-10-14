@@ -1,16 +1,16 @@
-{ Math } = require '../lib/main'
+{ R } = require '../lib/main'
 
-console.log Math.random1()
+console.log R.random1()
 # 6
 
-console.log Math.random2()
+console.log R.random2()
 # 81.73091324287796
 
-console.log Math.random3()
+console.log R.random3()
 # 89
 
-console.log Math.random4()
+console.log R.random4()
 # 447.9572762734203
 
-console.log Math.random5()
+console.log R.random5()
 # 648
