@@ -1,7 +1,7 @@
 ###
-  @ fpcoffee v1
-  @ 2023 fxhxyz
-  @ MIT license
+  @R fpcoffee v1
+  @R 2023 fxhxyz
+  @R MIT license
 ###
 
 { log, err, warn, info } = require './utils/console'
@@ -76,6 +76,21 @@ every = (l, c) ->
 #--------------------#
 ### @FP @methods ###
 #--------------------#
+
+###
+  @param {Array} a - array
+  @returns {Array} - new array
+###
+highOrderFunc = (...a) ->
+  r = new Array()
+
+  for e in a
+    unless typeof e == 'function'
+      return null
+
+    r.push e()
+    continue
+  return r
 
 #--------------------#
 ### @Math @methods ###
@@ -225,4 +240,5 @@ module.exports =
     random3
     random4
     random5
+    highOrderFunc
   }
