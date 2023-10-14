@@ -74,6 +74,10 @@ every = (l, c) ->
   return l.every (e) -> e == x
 
 #--------------------#
+### @FP @methods ###
+#--------------------#
+
+#--------------------#
 ### @Math @methods ###
 #--------------------#
 
@@ -110,7 +114,7 @@ divide = (v) ->
 ###
 power = (o) ->
   s = o.slice()
-  return s.map((q) -> q ** 2)
+  return s.map (q) -> q ** 2
 
 ###
   @param {Array} w - array
@@ -118,7 +122,7 @@ power = (o) ->
 ###
 squareRoot = (w) ->
   a = w.slice()
-  return a.map((e) -> Math.sqrt e)
+  return a.map (e) -> Math.sqrt e
 
 ###
   @private function
@@ -198,18 +202,12 @@ random5 = ->
   return Math.floor Math.random() * 1000
 
 module.exports =
-  Array: {
+  R: {
     take
     drop
     reverse
-  }
-
-  ArrayElements: {
     some
     every
-  }
-
-  Math: {
     add
     subtract
     multiply
