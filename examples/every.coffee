@@ -1,6 +1,6 @@
-{ ArrayElements } = require '../lib/main'
+{ R } = require '../lib/main'
 
 array = ["str", "str", "str", "str"]
 
-console.log ArrayElements.every array, "str"
+console.log R.every array, "str"
 # true

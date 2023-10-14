@@ -1,6 +1,6 @@
-{ Math } = require '../lib/main'
+{ R } = require '../lib/main'
 
 array = [7, 2]
 
-console.log Math.power array
+console.log R.power array
 # 49

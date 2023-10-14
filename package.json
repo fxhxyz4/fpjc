@@ -34,12 +34,13 @@
     "coffee-babel": "coffee --no-header --compile --transpile --inline-map ./lib/*.coffee",
     "coffee-watch": "coffee --no-header --watch --compile ./lib/*.coffee",
     "coffee-node": "coffee ./lib/main.coffee --node",
-    "test": "coffee ./examples/squareRoot.coffee"
+    "test": "coffee ./examples/highOrderFunc.coffee"
   },
   "devDependencies": {
     "@babel/cli": "7.23.0",
     "@babel/core": "7.23.0",
     "@babel/preset-env": "7.23.2",
+    "@babel/core": "7.23.2",
     "@coffeelint/cli": "^5.2.11",
     "coffeescript": "2.7.0",
     "prettier-plugin-coffeescript": "^0.1.5"

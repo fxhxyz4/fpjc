@@ -1,6 +1,6 @@
-{ Math } = require '../lib/main'
+{ R } = require '../lib/main'
 
 array = [11, 2, 5]
 
-console.log Math.multiply array
+console.log R.multiply array
 # 110

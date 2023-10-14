@@ -1,7 +1,7 @@
 ###
-  @ fpcoffee v1
-  @ 2023 fxhxyz
-  @ MIT license
+  @R fpcoffee v1
+  @R 2023 fxhxyz
+  @R MIT license
 ###
 
 { log, err, warn, info } = require './utils/console'
@@ -74,6 +74,25 @@ every = (l, c) ->
   return l.every (e) -> e == x
 
 #--------------------#
+### @FP @methods ###
+#--------------------#
+
+###
+  @param {Array} a - array
+  @returns {Array} - new array
+###
+highOrderFunc = (...a) ->
+  r = new Array()
+
+  for e in a
+    unless typeof e == 'function'
+      return null
+
+    r.push e()
+    continue
+  return r
+
+#--------------------#
 ### @Math @methods ###
 #--------------------#
 
@@ -110,7 +129,7 @@ divide = (v) ->
 ###
 power = (o) ->
   s = o.slice()
-  return s.map((q) -> q ** 2)
+  return s.map (q) -> q ** 2
 
 ###
   @param {Array} w - array
@@ -118,7 +137,7 @@ power = (o) ->
 ###
 squareRoot = (w) ->
   a = w.slice()
-  return a.map((e) -> Math.sqrt e)
+  return a.map (e) -> Math.sqrt e
 
 ###
   @private function
@@ -198,18 +217,12 @@ random5 = ->
   return Math.floor Math.random() * 1000
 
 module.exports =
-  Array: {
+  R: {
     take
     drop
     reverse
-  }
-
-  ArrayElements: {
     some
     every
-  }
-
-  Math: {
     add
     subtract
     multiply
@@ -227,4 +240,5 @@ module.exports =
     random3
     random4
     random5
+    highOrderFunc
   }
