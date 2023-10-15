@@ -1,11 +1,11 @@
-###
-  Is a utility function that can be used to perform
-  various mathematical operations on arrays of numbers.
-
-  @private
-  @param {Array} v
-  @param {Function} f
-  @return {Number}
+###*
+  * Is a utility function that can be used to perform
+  * various mathematical operations on arrays of numbers.
+  *
+  * @private
+  * @param {Array} v
+  * @param {Function} f
+  * @return {Number}
 ###
 
 basic = (v, f) ->
@@ -17,4 +17,4 @@ basic = (v, f) ->
       return 0
     return f s, e
 
-module.exports = basic
+export default basic
