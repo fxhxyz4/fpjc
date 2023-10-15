@@ -1,4 +1,4 @@
-{ R } = require '../lib/main'
+{ R } = require '../dist/main'
 
 array = [7, 4, 1]
 

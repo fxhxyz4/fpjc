@@ -1,10 +1,10 @@
 { R } = require '../lib/main'
 
-x = () -> true
+x = -> true
 
-y = () -> false
+y = -> false
 
-z = () -> 'xyz'
+z = -> 'xyz'
 
 console.log R.highOrderFunc x, y, z
 # [ true, false, 'xyz' ]
