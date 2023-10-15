@@ -1,5 +1,5 @@
 {
-  "name": "fp-coffee",
+  "name": "fpcoffee",
   "version": "1.0.0",
   "description": "Functional utilities library for coffee/js",
   "keywords": [
@@ -14,11 +14,11 @@
     "email": "fxhxyz@proton.me",
     "url": "https://fxhxyz.vercel.app/"
   },
-  "homepage": "https://github.com/fxhxyz4/fp-coffee",
-  "bugs": "https://github.com/fxhxyz4/fp-coffee/issues",
+  "homepage": "https://github.com/fxhxyz4/fpcoffee",
+  "bugs": "https://github.com/fxhxyz4/fpcoffee/issues",
   "repository": {
     "type": "git",
-    "url": "git://github.com/fxhxyz4/fp-coffee.git"
+    "url": "git://github.com/fxhxyz4/fpcoffee.git"
   },
   "maintainers": [
     {
@@ -26,14 +26,15 @@
       "email": "fxhxyz@proton.me"
     }
   ],
+  "type": "module",
   "license": "MIT",
   "scripts": {
     "lint-config": "coffeelint --makeconfig > coffeelint.json",
     "lint": "coffeelint -f coffeelint.json ./src/*.coffee ./examples/*.coffee ./dist/*.coffee",
     "prettier": "prettier ./src/*.coffee ./examples/*.coffee ./dist/*.coffee --write",
-    "babel": "coffee --no-header --compile --transpile --inline-map ./dist/fpcoffee.coffee",
-    "webpack": "webpack -c ./webpack.config.js --mode=production",
-    "webpack-watch": "webpack -c ./webpack.config.js --mode=development -w",
+    "babel": "babel dist/*.js -d dist/ --presets=@babel/preset-env",
+    "build": "rollup -c",
+    "w": "webpack -c ./webpack.config.js --mode=production",
     "test": "coffee ./examples/add.coffee"
   },
   "devDependencies": {
@@ -41,12 +42,9 @@
     "@babel/core": "7.23.2",
     "@babel/preset-env": "7.23.2",
     "@coffeelint/cli": "^5.2.11",
-    "coffee-loader": "4.0.0",
     "coffeescript": "2.7.0",
-    "glob": "10.3.10",
     "prettier-plugin-coffeescript": "^0.1.5",
-    "webpack": "5.89.0",
-    "webpack-cli": "5.1.4",
-    "webpack-concat-files-plugin": "0.5.2"
+    "rollup": "4.1.1",
+    "rollup-plugin-coffee-script": "2.0.0"
   }
 }
