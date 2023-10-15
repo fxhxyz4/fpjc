@@ -1,4 +1,6 @@
 ###
+  Calculate the square root of each element in the input array.
+
   @param {Array} w
   @return {Array} new array
 ###
