@@ -15,9 +15,6 @@
   "duplicate_key" : {
     "level" : "error"
   },
-  "empty_constructor_needs_parens" : {
-    "level" : "ignore"
-  },
   "indentation" : {
     "value" : 2,
     "level" : "error"
@@ -30,20 +27,11 @@
     "value": 80,
     "level" : "error"
   },
-  "newlines_after_classes" : {
-    "level" : "ignore"
-  },
   "no_backticks" : {
     "level" : "error"
   },
-  "no_implicit_braces" : {
-    "level" : "error"
-  },
-  "no_implicit_parens" : {
-    "level" : "error"
-  },
   "no_plusplus" : {
-    "level" : "error"
+    "level" : "ignore"
   },
   "no_stand_alone_at" : {
     "level": "error"
@@ -55,15 +43,12 @@
     "level" : "error"
   },
   "no_trailing_semicolons" : {
-    "level" : "error"
+    "level" : "warn"
   },
   "no_trailing_whitespace" : {
     "level" : "error"
   },
-  "non_empty_constructor_needs_parens" : {
-    "level" : "ignore"
-  },
   "space_operators" : {
-    "level" : "error"
+    "level" : "warn"
   }
 }
