@@ -1,3 +1,3 @@
 <div align="center">
-  ![image](./assets/fpjc.png)
+  <img src="./assets/fpjc.png" alt="fpjc" width="200" height="200" />
 </div>
