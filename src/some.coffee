@@ -9,7 +9,7 @@
 
 some = (a, w) ->
   unless a instanceof Array
-    throw new Error("Typeof: #{typeof a}")
+    throw new Error "Typeof: #{typeof a}"
 
   n = String w
 

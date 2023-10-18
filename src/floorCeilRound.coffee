@@ -7,7 +7,7 @@
 
 floorCeilRound = (g, y) ->
   unless g instanceof Array
-    throw new Error("Typeof: #{typeof g}")
+    throw new Error "Typeof: #{typeof g}"
 
   c = new Array()
 

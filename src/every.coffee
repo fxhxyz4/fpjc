@@ -9,7 +9,7 @@
 
 every = (l, c) ->
   unless l instanceof Array
-    throw new Error("Typeof: #{typeof l}")
+    throw new Error "Typeof: #{typeof l}"
 
   x = String c
 

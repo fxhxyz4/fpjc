@@ -12,7 +12,7 @@ highOrderFunc = (...a) ->
 
   for e in a
     unless typeof e == 'function'
-      throw new Error('Argument not a function');
+      throw new Error 'Argument not a function'
 
     r.push e()
   return r
