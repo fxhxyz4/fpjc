@@ -6,6 +6,8 @@
 */
 
 
+'use strict';
+
 /**
   * Is a utility function that can be used to perform
   * various mathematical operations on arrays of numbers.
@@ -477,5 +479,5 @@ F = {f: f$1, t: t$1, basic: basic$1, add: add$1, divide: divide$1, multiply: mul
 
 var F$1 = F;
 
-export { F$1 as F };
-//# sourceMappingURL=fpcoffee.js.map
+exports.F = F$1;
+//# sourceMappingURL=fpcoffee.cjs.map
