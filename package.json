@@ -32,19 +32,24 @@
     "lint-config": "coffeelint --makeconfig > coffeelint.json",
     "lint": "coffeelint -f coffeelint.json ./src/*.coffee ./examples/*.coffee ./dist/*.coffee",
     "prettier": "prettier ./src/*.coffee ./examples/*.coffee ./dist/*.coffee --write",
-    "babel": "babel dist/*.js -d dist/ --presets=@babel/preset-env",
-    "build": "rollup -c",
-    "w": "webpack -c ./webpack.config.js --mode=production",
-    "test": "coffee ./examples/add.coffee"
+    "babel": "babel dist/*.* -d dist/ --presets=@babel/preset-env",
+    "build-dev": "NODE_ENV='dev' rollup -c",
+    "build-prod": "NODE_ENV='prod' rollup -c",
+    "test-c": "coffee ./examples/add.coffee",
+    "test-j": "node ./examples/lol.js"
   },
   "devDependencies": {
     "@babel/cli": "7.23.0",
     "@babel/core": "7.23.2",
+    "@babel/plugin-transform-runtime": "7.23.2",
     "@babel/preset-env": "7.23.2",
     "@coffeelint/cli": "^5.2.11",
+    "@rollup/plugin-babel": "6.0.4",
+    "@rollup/plugin-node-resolve": "15.2.3",
     "coffeescript": "2.7.0",
     "prettier-plugin-coffeescript": "^0.1.5",
     "rollup": "4.1.1",
-    "rollup-plugin-coffee-script": "2.0.0"
+    "rollup-plugin-coffee-script": "2.0.0",
+    "rollup-plugin-uglify": "6.0.4"
   }
 }
