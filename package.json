@@ -10,6 +10,12 @@
     "fpc",
     "fp"
   ],
+  "files": [
+    "dist/fpc.js",
+    "dist/fpc.cjs",
+    "dist/fpc.min.js",
+    "dist/fpc.min.cjs"
+  ],
   "author": {
     "name": "fxhxyz4",
     "email": "fxhxyz@proton.me",
