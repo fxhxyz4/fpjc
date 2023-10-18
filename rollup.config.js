@@ -6,7 +6,7 @@ import babel from '@rollup/plugin-babel';
 let banner = '/** \n* @F fpcoffe v' + pkg.version + '\n'
   + '* @F (c)' + new Date().getFullYear() + ' fxhxyz \n'
   + '* @F MIT License\n'
-  + '* @F github.com/fxhxyz4/fpcoffee\n*/\n\n'
+  + '* @F github.com/fxhxyz4/fpc\n*/\n\n'
 
 let config = {};
 
