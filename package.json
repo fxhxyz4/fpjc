@@ -1,7 +1,7 @@
 {
-  "name": "fpc",
+  "name": "fpjc",
   "version": "1.0.0",
-  "description": "Functional utilities library for coffee/js",
+  "description": "Functional utilities library for js/coffee",
   "keywords": [
     "functional programming",
     "coffeescript",
@@ -11,21 +11,21 @@
     "fp"
   ],
   "files": [
-    "dist/fpc.js",
-    "dist/fpc.cjs",
-    "dist/fpc.min.js",
-    "dist/fpc.min.cjs"
+    "dist/fpjc.js",
+    "dist/fpjc.cjs",
+    "dist/fpjc.min.js",
+    "dist/fpjc.min.cjs"
   ],
   "author": {
     "name": "fxhxyz4",
     "email": "fxhxyz@proton.me",
     "url": "https://fxhxyz.vercel.app/"
   },
-  "homepage": "https://github.com/fxhxyz4/fpc",
-  "bugs": "https://github.com/fxhxyz4/fpc/issues",
+  "homepage": "https://github.com/fxhxyz4/fpjc",
+  "bugs": "https://github.com/fxhxyz4/fpjc/issues",
   "repository": {
     "type": "git",
-    "url": "git://github.com/fxhxyz4/fpc.git"
+    "url": "git://github.com/fxhxyz4/fpjc.git"
   },
   "maintainers": [
     {
