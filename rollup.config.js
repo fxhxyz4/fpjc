@@ -14,13 +14,13 @@ export default config = {
   input: './src/export.coffee',
   output: [
     {
-      file: './dist/fpcoffee.js',
+      file: './dist/fpc.js',
       format: 'esm',
       sourcemap: true,
       banner: banner
     },
     {
-      file: './dist/fpcoffee.cjs',
+      file: './dist/fpc.cjs',
       format: 'cjs',
       sourcemap: true,
       banner: banner
@@ -40,12 +40,12 @@ export default config = {
 if (process.env.NODE_ENV === 'prod') {
   config.output = [
     {
-      file: './dist/fpcoffee.min.js',
+      file: './dist/fpc.min.js',
       format: 'es',
       sourcemap: true,
     },
     {
-      file: './dist/fpcoffee.min.cjs',
+      file: './dist/fpc.min.cjs',
       format: 'cjs',
       sourcemap: true,
     },
