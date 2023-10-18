@@ -6,3 +6,5 @@ branches:
   - master
 notifications:
   email: false
+before_install:
+  npm install --legacy-peer-deps
