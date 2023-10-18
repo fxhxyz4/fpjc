@@ -43,7 +43,8 @@
     "build-dev": "NODE_ENV='dev' rollup -c",
     "build-prod": "NODE_ENV='prod' rollup -c",
     "test-c": "coffee ./examples/add.coffee",
-    "test-j": "node ./examples/lol.js"
+    "test-j": "node ./examples/lol.js",
+    "test": "\"tested\""
   },
   "devDependencies": {
     "@babel/cli": "7.23.0",
