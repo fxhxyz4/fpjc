@@ -3,7 +3,7 @@ import coffee from 'rollup-plugin-coffee-script';
 import { uglify } from "rollup-plugin-uglify";
 import babel from '@rollup/plugin-babel';
 
-let banner = '/** \n* @F fpcoffe v' + pkg.version + '\n'
+let banner = '/** \n* @F fpc v' + pkg.version + '\n'
   + '* @F (c)' + new Date().getFullYear() + ' fxhxyz \n'
   + '* @F MIT License\n'
   + '* @F github.com/fxhxyz4/fpc\n*/\n\n'
