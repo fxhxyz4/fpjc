@@ -1,8 +1,8 @@
 /** 
-* @F fpcoffe v1.0.0
+* @F fpc v1.0.0
 * @F (c)2023 fxhxyz 
 * @F MIT License
-* @F github.com/fxhxyz4/fpcoffee
+* @F github.com/fxhxyz4/fpc
 */
 
 
@@ -480,4 +480,4 @@ F = {f: f$1, t: t$1, basic: basic$1, add: add$1, divide: divide$1, multiply: mul
 var F$1 = F;
 
 exports.F = F$1;
-//# sourceMappingURL=fpcoffee.cjs.map
+//# sourceMappingURL=fpc.cjs.map
