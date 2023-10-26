@@ -3,27 +3,27 @@ import coffee from 'rollup-plugin-coffee-script';
 import { uglify } from "rollup-plugin-uglify";
 import babel from '@rollup/plugin-babel';
 
-let banner = '/** \n* @F fpjc v' + pkg.version + '\n'
-  + '* @F (c)' + new Date().getFullYear() + ' fxhxyz \n'
-  + '* @F MIT License\n'
-  + '* @F github.com/fxhxyz4/fpjc\n*/\n\n'
+let banner = `/**\n* @F fpjc v${pkg.version}\n`
+  + `* @F (c)${new Date().getFullYear()} fxhxyz\n`
+  + `* @F MIT License\n`
+  + `* @F github.com/fxhxyz4/fpjc\n*/\n\n`
 
 let config = {};
-let path = './dist/fpjc'
+let path = './lib/fpjc'
 
 export default config = {
-  input: './src/export.coffee',
+  input: `${path}.coffee`,
   output: [
     {
       file: `${path}.js`,
       format: 'esm',
-      sourcemap: true,
+      sourcemap: false,
       banner: banner
     },
     {
       file: `${path}.cjs`,
       format: 'cjs',
-      sourcemap: true,
+      sourcemap: false,
       banner: banner
     },
   ],
@@ -43,12 +43,12 @@ if (process.env.NODE_ENV === 'prod') {
     {
       file: `${path}.min.js`,
       format: 'es',
-      sourcemap: true,
+      sourcemap: false,
     },
     {
       file: `${path}.min.cjs`,
       format: 'cjs',
-      sourcemap: true,
+      sourcemap: false,
     },
   ],
 
