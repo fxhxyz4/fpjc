@@ -1,7 +1,4 @@
-const { F } = require('../dist/fpcoffee.cjs');
+import F from '../lib/fpjc.js';
+
 console.log(F.t());
 console.log(F.f());
-
-// import { F } from '../dist/fpcoffee.js';
-
-// console.log(F.t());
