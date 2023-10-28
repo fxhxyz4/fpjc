@@ -1,54 +1,54 @@
 {
   "arrow_spacing": {
-    "level" : "error"
-  },
-  "camel_case_classes" : {
-    "level" : "error"
-  },
-  "coffeescript_error" : {
-    "level" : "error"
-  },
-  "cyclomatic_complexity" : {
-    "value" : 12,
-    "level" : "warn"
-  },
-  "duplicate_key" : {
-    "level" : "error"
-  },
-  "indentation" : {
-    "value" : 2,
-    "level" : "error"
-  },
-  "line_endings" : {
-    "value" : "unix",
-    "level" : "ignore"
-  },
-  "max_line_length" : {
-    "value": 80,
-    "level" : "error"
-  },
-  "no_backticks" : {
-    "level" : "error"
-  },
-  "no_plusplus" : {
-    "level" : "ignore"
-  },
-  "no_stand_alone_at" : {
     "level": "error"
   },
-  "no_tabs" : {
-    "level" : "error"
+  "camel_case_classes": {
+    "level": "error"
   },
-  "no_throwing_strings" : {
-    "level" : "error"
+  "coffeescript_error": {
+    "level": "error"
   },
-  "no_trailing_semicolons" : {
-    "level" : "warn"
+  "cyclomatic_complexity": {
+    "value": 12,
+    "level": "warn"
   },
-  "no_trailing_whitespace" : {
-    "level" : "error"
+  "duplicate_key": {
+    "level": "error"
   },
-  "space_operators" : {
-    "level" : "warn"
+  "indentation": {
+    "value": 2,
+    "level": "error"
+  },
+  "line_endings": {
+    "value": "unix",
+    "level": "ignore"
+  },
+  "max_line_length": {
+    "value": 80,
+    "level": "error"
+  },
+  "no_backticks": {
+    "level": "error"
+  },
+  "no_plusplus": {
+    "level": "ignore"
+  },
+  "no_stand_alone_at": {
+    "level": "error"
+  },
+  "no_tabs": {
+    "level": "error"
+  },
+  "no_throwing_strings": {
+    "level": "error"
+  },
+  "no_trailing_semicolons": {
+    "level": "warn"
+  },
+  "no_trailing_whitespace": {
+    "level": "error"
+  },
+  "space_operators": {
+    "level": "ignore"
   }
 }
