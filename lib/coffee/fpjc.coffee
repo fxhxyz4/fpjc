@@ -1,4 +1,4 @@
-# ======================================================= #
+# =======================================================
 
 ###*
   * @return {Boolean} true
@@ -6,7 +6,7 @@
 
 t = -> true
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * @return {Boolean} false
@@ -14,7 +14,7 @@ t = -> true
 
 f = -> false
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * Is a utility function that can be used to perform
@@ -35,7 +35,7 @@ basic = (v, f) ->
       return 0
     return f s, e
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * This function performs the addition operation on the
@@ -48,7 +48,7 @@ basic = (v, f) ->
 add = (v) ->
   basic v, (s, e) -> s + e
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * This function performs the division operation on the
@@ -61,7 +61,7 @@ add = (v) ->
 divide = (v) ->
   basic v, (s, e) -> s / e
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * This function performs the multiplication operation on
@@ -74,7 +74,7 @@ divide = (v) ->
 multiply = (v) ->
   basic v, (s, e) -> s * e
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * This function performs the subtraction operation on the
@@ -87,7 +87,7 @@ multiply = (v) ->
 subtract = (v) ->
   basic v, (s, e) -> s - e
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * This function takes an array `o` as a parameter and returns
@@ -101,7 +101,7 @@ power = (o) ->
   s = o.slice()
   return s.map (q) -> q ** 2
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * Calculate the square root of each element in the input array.
@@ -114,7 +114,7 @@ squareRoot = (w) ->
   a = w.slice()
   return a.map (e) -> Math.sqrt e
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * This function generates a random number
@@ -126,7 +126,7 @@ squareRoot = (w) ->
 random1 = ->
   return Math.floor Math.random() * 10
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * This function generates a random decimal number between 0 and 99
@@ -138,7 +138,7 @@ random1 = ->
 random2 = ->
   return Math.random() * 100
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * This function generates a random decimal number between 0 and 99
@@ -150,7 +150,7 @@ random2 = ->
 random3 = ->
   return Math.floor Math.random() * 100
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * This function generates a random decimal number between 0 and 999
@@ -162,7 +162,7 @@ random3 = ->
 random4 = ->
   return Math.random() * 1000
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * This function generates a random decimal number between 0 and 999
@@ -174,7 +174,7 @@ random4 = ->
 random5 = ->
   return Math.floor Math.random() * 1000
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * @private
@@ -197,7 +197,7 @@ floorCeilRound = (g, y) ->
 
   return c
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * @param {Number} r
@@ -207,7 +207,7 @@ floorCeilRound = (g, y) ->
 floor = (r) ->
   return Math.floor r
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * @param {Array} n
@@ -217,7 +217,7 @@ floor = (r) ->
 floor2 = (n) ->
   floorCeilRound n, (n) -> Math.floor n
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * @param {Number} t
@@ -227,7 +227,7 @@ floor2 = (n) ->
 ceil = (t) ->
   return Math.ceil t
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * @param {Array} k
@@ -237,7 +237,7 @@ ceil = (t) ->
 ceil2 = (k) ->
   floorCeilRound k, (k) -> Math.ceil k
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * @param {Number} z
@@ -247,7 +247,7 @@ ceil2 = (k) ->
 round = (z) ->
   return Math.round z
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * @param {Array} h
@@ -257,7 +257,7 @@ round = (z) ->
 round2 = (h) ->
   floorCeilRound h, (h) -> Math.round h
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * @private
@@ -275,7 +275,7 @@ takeOrDrop = (r, h) ->
   else
     return r.slice -h
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * @param {Array} e
@@ -286,7 +286,7 @@ takeOrDrop = (r, h) ->
 drop = (e, p) ->
   takeOrDrop e, -p
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * @param {Array} b
@@ -297,7 +297,7 @@ drop = (e, p) ->
 take = (b, t) ->
   takeOrDrop b, t
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * highOrderFunc takes multiple arguments and returns a new array.
@@ -312,13 +312,13 @@ highOrderFunc = (...a) ->
   r = new Array()
 
   for e in a
-    unless typeof e == 'function'
+    unless typeof e != 'function'
       throw new Error 'Argument not a function'
 
     r.push e()
   return r
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * This function `every` takes an array `l` and a string
@@ -337,7 +337,7 @@ every = (l, c) ->
 
   return l.every (e) -> e == x
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * This function `some` takes an array `a` and a
@@ -360,7 +360,7 @@ some = (a, w) ->
 
   return false
 
-# ======================================================= #
+# =======================================================
 
 ###*
   * This function takes an array as input and returns
@@ -374,7 +374,7 @@ reverse = (o) ->
   t = o.slice().reverse()
   return t
 
-# ======================================================= #
+# =======================================================
 
 F = {
   t
@@ -406,5 +406,14 @@ F = {
   every
   highOrderFunc
 }
+
+if typeof module isnt 'undefined' and module.exports
+  module.exports = F
+
+if typeof window isnt 'undefined'
+  window.F = F
+
+if typeof define isnt 'undefined' and define.amd
+  define -> F
 
 export default F
