@@ -11,10 +11,11 @@
     "fp"
   ],
   "files": [
-    "dist/fpjc.js",
-    "dist/fpjc.cjs",
-    "dist/fpjc.min.js",
-    "dist/fpjc.min.cjs"
+    "lib/coffee/fpjc.coffee",
+    "lib/fpjc.js",
+    "lib/fpjc.cjs",
+    "lib/min/fpjc.min.js",
+    "lib/min/fpjc.min.cjs"
   ],
   "author": {
     "name": "fxhxyz4",
@@ -35,32 +36,43 @@
   ],
   "type": "module",
   "license": "MIT",
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead"
+  ],
   "scripts": {
     "lint-config": "coffeelint --makeconfig > coffeelint.json",
-    "lint": "coffeelint -f coffeelint.json ./src/*.coffee ./examples/*.coffee ./dist/*.coffee",
-    "prettier": "prettier ./src/*.coffee ./examples/*.coffee ./dist/*.coffee --write",
-    "babel": "babel dist/*.* -d dist/ --presets=@babel/preset-env",
-    "build-dev": "NODE_ENV='dev' rollup -c",
-    "build-prod": "NODE_ENV='prod' rollup -c",
-    "test-c": "coffee ./examples/add.coffee",
-    "test-j": "node ./examples/lol.js",
+    "lint": "coffeelint -f coffeelint.json lib/coffee/*.coffee examples/*.coffee",
+    "prettier": "prettier lib/coffee/*.coffee examples/*.coffee tests/*.coffee --write",
+    "babel-dev": "babel lib/*.* -d lib/ --presets=@babel/preset-env",
+    "babel-prod": "babel lib/min/*.js && lib/min/*.cjs -d lib/min/ --presets=@babel/preset-env",
+    "uglify-js": "uglifyjs lib/min/*.js -o lib/min/*.js --ie --toplevel",
+    "uglify-cjs": "uglifyjs lib/min/*.cjs -o lib/min/*.cjs --ie --toplevel",
+    "uglify": "npm run uglify-js && npm run uglify-cjs",
+    "babel": "npm run babel-dev && npm run babel-prod",
+    "build-dev": "NODE_ENV=dev rollup -c",
+    "build-prod": "NODE_ENV=prod rollup -c",
+    "build": "npm run build-dev && npm run build-prod",
+    "test-c": "coffee examples/add.coffee",
+    "test-j": "node examples/lol.mjs",
     "test": "echo \"tested\""
   },
   "devDependencies": {
     "@babel/cli": "7.23.0",
     "@babel/core": "7.23.2",
-    "@babel/plugin-transform-runtime": "7.23.2",
     "@babel/preset-env": "7.23.2",
     "@coffeelint/cli": "^5.2.11",
-    "@rollup/plugin-babel": "6.0.4",
-    "@rollup/plugin-node-resolve": "15.2.3",
+    "babel-minify": "0.5.2",
     "coffeescript": "2.7.0",
     "prettier-plugin-coffeescript": "^0.1.5",
     "rollup": "4.1.4",
     "rollup-plugin-coffee-script": "2.0.0",
-    "rollup-plugin-uglify": "4.0.0"
+    "rollup-plugin-uglify": "4.0.0",
+    "uglify-js": "3.17.4"
   },
   "engines": {
-    "node": "18.x"
+    "node": "20.x"
   }
 }
