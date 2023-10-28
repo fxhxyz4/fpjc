@@ -1,7 +1,6 @@
 import pkg from './package.json' assert { type: "json" };
 import coffee from 'rollup-plugin-coffee-script';
 import { uglify } from "rollup-plugin-uglify";
-import babel from '@rollup/plugin-babel';
 
 let banner = `/**\n* @F fpjc v${pkg.version}\n`
   + `* @F (c)${new Date().getFullYear()} fxhxyz\n`
@@ -9,10 +8,10 @@ let banner = `/**\n* @F fpjc v${pkg.version}\n`
   + `* @F github.com/fxhxyz4/fpjc\n*/\n\n`
 
 let config = {};
-let path = './lib/fpjc'
+let path = './lib/fpjc';
 
 export default config = {
-  input: `${path}.coffee`,
+  input: `./lib/coffee/fpjc.coffee`,
   output: [
     {
       file: `${path}.js`,
@@ -24,41 +23,35 @@ export default config = {
       file: `${path}.cjs`,
       format: 'cjs',
       sourcemap: false,
-      banner: banner
+      banner: banner,
+      exports: 'auto',
     },
   ],
   plugins: [
     coffee(),
-    babel(
-      {
-        exclude: 'node_modules/**',
-        babelrc: false,
-      }
-    )
   ],
 }
 
 if (process.env.NODE_ENV === 'prod') {
+/*
+  config.plugins.push(
+    uglify()
+  )
+*/
+
+path = './lib/min/fpjc';
+
   config.output = [
     {
       file: `${path}.min.js`,
-      format: 'es',
+      format: 'esm',
       sourcemap: false,
     },
     {
       file: `${path}.min.cjs`,
       format: 'cjs',
       sourcemap: false,
+      exports: 'auto',
     },
-  ],
-
-  config.plugins.push(
-    uglify({
-      compress: {
-        pure_getters: true,
-        unsafe: true,
-        unsafe_comps: true,
-      }
-    })
-  );
+  ]
 }
