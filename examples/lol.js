@@ -2,6 +2,6 @@
 
 // console.log(F.add([1, 2, 3]));
 
-import F from 'fpjc-test/lib/fpjc.esm.js';
+import F from 'fpjc-test';
 
 console.log(F.add([1, 2, 3]));
