@@ -1,3 +1,7 @@
-const F = require('../lib/fpjc.js').default;
+// const F = require('fpjc-test').default;
+
+// console.log(F.add([1, 2, 3]));
+
+import F from 'fpjc-test/lib/fpjc.esm.js';
 
 console.log(F.add([1, 2, 3]));
