@@ -5,16 +5,15 @@ import { uglify } from "rollup-plugin-uglify";
 let banner = `/**\n* @F fpjc v${pkg.version}\n`
   + `* @F (c)${new Date().getFullYear()} fxhxyz\n`
   + `* @F MIT License\n`
-  + `* @F github.com/fxhxyz4/fpjc\n*/\n\n`
+  + `* @F github.com/fxhxyz4/fpjc\n*/\n`
 
 let config = {};
-let path = './lib/fpjc';
 
 export default config = {
   input: `./lib/coffee/fpjc.coffee`,
   output: [
     {
-      file: `${path}.js`,
+      file: `./dist/fpjc.js`,
       format: 'umd',
       name: 'F',
       exports: 'named',
@@ -22,14 +21,14 @@ export default config = {
       banner: banner
     },
     {
-      file: `${path}.cjs.js`,
+      file: `./lib/index.js`,
       format: 'cjs',
       exports: 'named',
       sourcemap: false,
       banner: banner,
     },
     {
-      file: `${path}.esm.js`,
+      file: `./lib/es/index.js`,
       format: 'esm',
       sourcemap: false,
       banner: banner,
@@ -47,26 +46,13 @@ if (process.env.NODE_ENV === 'prod') {
   )
 */
 
-path = './lib/min/fpjc';
-
   config.output = [
     {
-      file: `${path}.min.js`,
+      file: `./dist/fpjc.min.js`,
       format: 'umd',
       name: 'F',
       exports: 'named',
       sourcemap: false,
-    },
-    {
-      file: `${path}.cjs.min.js`,
-      format: 'cjs',
-      exports: 'named',
-      sourcemap: false,
-    },
-    {
-      file: `${path}.esm.min.js`,
-      format: 'esm',
-      sourcemap: false,
-    },
+    }
   ]
 }
