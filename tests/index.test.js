@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import F from '../lib/fpjc.esm.js';
+import F from '../lib/es/index.js';
 
 describe('F library', function () {
   describe('Boolean functions', function () {
