@@ -407,13 +407,4 @@ F = {
   highOrderFunc
 }
 
-if typeof module isnt 'undefined' and module.exports
-  module.exports = F
-
-if typeof window isnt 'undefined'
-  window.F = F
-
-if typeof define isnt 'undefined' and define.amd
-  define -> F
-
 export default F
