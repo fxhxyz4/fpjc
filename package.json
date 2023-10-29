@@ -1,7 +1,7 @@
 {
   "name": "fpjc-test",
   "version": "1.0.1",
-  "description": "Functional utilities library for js/coffee",
+  "description": "Functional utilities library for javascript",
   "keywords": [
     "functional programming",
     "coffeescript",
@@ -11,13 +11,25 @@
     "fp"
   ],
   "files": [
-    "lib/fpjc.js",
-    "lib/fpjc.cjs.js",
-    "lib/fpjc.esm.js",
-    "lib/min/fpjc.min.js",
-    "lib/min/fpjc.cjs.min.js",
-    "lib/min/fpjc.esm.min.js"
+    "lib",
+    "es",
+    "dist"
   ],
+  "exports": {
+    ".": {
+      "require": "./src/index.js",
+      "import": "./es/index.js",
+      "default": "./src/index.js"
+    },
+    "./es/*": "./es/*.js",
+    "./src/*": "./src/*.js",
+    "./dist/*": "./dist/*.js",
+    "./es/": "./es/",
+    "./src/": "./src/",
+    "./dist/": "./dist/"
+  },
+  "unpkg": "./dist/fpjc.min.js",
+  "jsdelivr": "./dist/fpjc.min.js",
   "author": {
     "name": "fxhxyz4",
     "email": "fxhxyz@proton.me",
@@ -46,19 +58,16 @@
   "scripts": {
     "lint-config": "coffeelint --makeconfig > coffeelint.json",
     "lint": "coffeelint -f coffeelint.json lib/coffee/*.coffee examples/*.coffee",
-    "prettier": "prettier lib/coffee/*.coffee examples/*.coffee tests/*.coffee --write",
+    "prettier": "prettier lib/coffee/*.coffee examples/*.coffee --write",
     "babel-dev": "babel lib/*.* -d lib/ --presets=@babel/preset-env",
     "babel-prod": "babel lib/min/*.js -d lib/min/ --presets=@babel/preset-env",
     "babel": "npm run babel-dev && npm run babel-prod",
-    "uglify-umd": "uglifyjs lib/min/fpjc.min.js -o lib/min/fpjc.min.js --ie --toplevel",
-    "uglify-cjs": "uglifyjs lib/min/fpjc.cjs.min.js -o lib/min/fpjc.cjs.min.js --ie --toplevel",
-    "uglify-esm": "uglifyjs lib/min/fpjc.esm.min.js -o lib/min/fpjc.esm.min.js --ie --toplevel",
-    "uglify": "npm run uglify-umd && npm run uglify-cjs && npm run uglify-esm",
     "build-dev": "NODE_ENV=dev rollup -c",
     "build-prod": "NODE_ENV=prod rollup -c",
     "build": "npm run build-dev && npm run build-prod",
+    "uglify": "uglifyjs dist/fpjc.min.js -o dist/fpjc.min.js --toplevel",
     "test-j": "node examples/lol.cjs",
-    "test": "mocha tests/fpjc.test.js"
+    "test": "mocha tests/index.test.js"
   },
   "devDependencies": {
     "@babel/cli": "7.23.0",
@@ -77,5 +86,9 @@
   },
   "engines": {
     "node": "20.x"
+  },
+  "dependencies": {
+    "fpjc-test": "1.0.1",
+    "ramda": "0.29.1"
   }
 }
