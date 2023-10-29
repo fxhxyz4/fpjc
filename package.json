@@ -18,13 +18,13 @@
   "exports": {
     ".": {
       "require": "./lib/index.js",
-      "import": "./es/index.js",
+      "import": "./lib/es/index.js",
       "default": "./lib/index.js"
     },
-    "./es/*": "./es/*.js",
+    "./lib/es/*": "./lib/es/*.js",
     "./lib/*": "./lib/*.js",
     "./dist/*": "./dist/*.js",
-    "./es/": "./es/",
+    "./lib/es/": "./lib/es/",
     "./lib/": "./lib/",
     "./dist/": "./dist/"
   },
@@ -87,7 +87,7 @@
     "node": "20.x"
   },
   "dependencies": {
-    "fpjc-test": "1.0.2",
+    "fpjc-test": "1.0.3",
     "ramda": "0.29.1"
   }
 }
