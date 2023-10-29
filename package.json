@@ -1,6 +1,6 @@
 {
-  "name": "fpjc-test",
-  "version": "1.0.4",
+  "name": "fpjc",
+  "version": "0.0.1",
   "description": "Functional utilities library for javascript",
   "keywords": [
     "functional programming",
@@ -57,8 +57,8 @@
   ],
   "scripts": {
     "lint-config": "coffeelint --makeconfig > coffeelint.json",
-    "lint": "coffeelint -f coffeelint.json lib/coffee/*.coffee examples/*.coffee",
-    "prettier": "prettier lib/coffee/*.coffee examples/*.coffee --write",
+    "lint": "coffeelint -f coffeelint.json lib/coffee/*.coffee",
+    "prettier": "prettier lib/coffee/*.coffee --write",
     "babel-dev": "babel lib/*.* -d lib/ --presets=@babel/preset-env",
     "babel-prod": "babel lib/min/*.js -d lib/min/ --presets=@babel/preset-env",
     "babel": "npm run babel-dev && npm run babel-prod",
@@ -66,7 +66,7 @@
     "build-prod": "NODE_ENV=prod rollup -c",
     "build": "npm run build-dev && npm run build-prod",
     "uglify": "uglifyjs dist/fpjc.min.js -o dist/fpjc.min.js --toplevel",
-    "test-j": "node examples/lol.js",
+    "test-j": "node examples/lol.mjs",
     "test": "mocha tests/index.test.js"
   },
   "devDependencies": {
@@ -85,9 +85,5 @@
   },
   "engines": {
     "node": "20.x"
-  },
-  "dependencies": {
-    "fpjc-test": "1.0.3",
-    "ramda": "0.29.1"
   }
 }
