@@ -5,7 +5,7 @@
 # console.log F.add array
 # 12
 
-F = require '../lib/fpjc.coffee'
+F = require '../lib/coffee/fpjc.coffee'
 
 array = [7, 4, 1]
 

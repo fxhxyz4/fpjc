@@ -1,4 +1,3 @@
-import F from '../lib/fpjc.js';
+import F from '../lib/fpjc.esm.js';
 
 console.log(F.t());
-console.log(F.f());
