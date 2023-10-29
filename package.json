@@ -1,6 +1,6 @@
 {
   "name": "fpjc",
-  "version": "0.0.2",
+  "version": "0.0.0",
   "description": "Functional utilities library for javascript",
   "keywords": [
     "functional programming",
@@ -82,5 +82,8 @@
   },
   "engines": {
     "node": "20.x"
+  },
+  "dependencies": {
+    "fpjc": "0.0.1"
   }
 }
