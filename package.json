@@ -1,5 +1,5 @@
 {
-  "name": "fpjc",
+  "name": "fpjc-test",
   "version": "1.0.0",
   "description": "Functional utilities library for js/coffee",
   "keywords": [
@@ -7,15 +7,16 @@
     "coffeescript",
     "javascript",
     "library",
-    "fpc",
+    "fpjc",
     "fp"
   ],
   "files": [
-    "lib/coffee/fpjc.coffee",
     "lib/fpjc.js",
-    "lib/fpjc.cjs",
+    "lib/fpjc.cjs.js",
+    "lib/fpjc.esm.js",
     "lib/min/fpjc.min.js",
-    "lib/min/fpjc.min.cjs"
+    "lib/min/fpjc.cjs.min.js",
+    "lib/min/fpjc.esm.min.js"
   ],
   "author": {
     "name": "fxhxyz4",
@@ -47,17 +48,17 @@
     "lint": "coffeelint -f coffeelint.json lib/coffee/*.coffee examples/*.coffee",
     "prettier": "prettier lib/coffee/*.coffee examples/*.coffee tests/*.coffee --write",
     "babel-dev": "babel lib/*.* -d lib/ --presets=@babel/preset-env",
-    "babel-prod": "babel lib/min/*.js && lib/min/*.cjs -d lib/min/ --presets=@babel/preset-env",
-    "uglify-js": "uglifyjs lib/min/*.js -o lib/min/*.js --ie --toplevel",
-    "uglify-cjs": "uglifyjs lib/min/*.cjs -o lib/min/*.cjs --ie --toplevel",
-    "uglify": "npm run uglify-js && npm run uglify-cjs",
+    "babel-prod": "babel lib/min/*.js -d lib/min/ --presets=@babel/preset-env",
     "babel": "npm run babel-dev && npm run babel-prod",
+    "uglify-umd": "uglifyjs lib/min/fpjc.min.js -o lib/min/fpjc.min.js --ie --toplevel",
+    "uglify-cjs": "uglifyjs lib/min/fpjc.cjs.min.js -o lib/min/fpjc.cjs.min.js --ie --toplevel",
+    "uglify-esm": "uglifyjs lib/min/fpjc.esm.min.js -o lib/min/fpjc.esm.min.js --ie --toplevel",
+    "uglify": "npm run uglify-umd && npm run uglify-cjs && npm run uglify-esm",
     "build-dev": "NODE_ENV=dev rollup -c",
     "build-prod": "NODE_ENV=prod rollup -c",
     "build": "npm run build-dev && npm run build-prod",
-    "test-c": "coffee examples/add.coffee",
-    "test-j": "node examples/lol.mjs",
-    "test": "echo \"tested\""
+    "test-j": "node examples/lol.cjs",
+    "test": "mocha tests/fpjc.test.js"
   },
   "devDependencies": {
     "@babel/cli": "7.23.0",
@@ -65,7 +66,9 @@
     "@babel/preset-env": "7.23.2",
     "@coffeelint/cli": "^5.2.11",
     "babel-minify": "0.5.2",
+    "chai": "4.3.10",
     "coffeescript": "2.7.0",
+    "mocha": "10.2.0",
     "prettier-plugin-coffeescript": "^0.1.5",
     "rollup": "4.1.4",
     "rollup-plugin-coffee-script": "2.0.0",
