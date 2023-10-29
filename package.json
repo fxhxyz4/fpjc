@@ -28,8 +28,6 @@
     "./lib/": "./lib/",
     "./dist/": "./dist/"
   },
-  "unpkg": "./dist/fpjc.min.js",
-  "jsdelivr": "./dist/fpjc.min.js",
   "author": {
     "name": "fxhxyz4",
     "email": "fxhxyz@proton.me",
@@ -66,7 +64,6 @@
     "build-prod": "NODE_ENV=prod rollup -c",
     "build": "npm run build-dev && npm run build-prod",
     "uglify": "uglifyjs dist/fpjc.min.js -o dist/fpjc.min.js --toplevel",
-    "test-j": "node examples/lol.mjs",
     "test": "mocha tests/index.test.js"
   },
   "devDependencies": {
