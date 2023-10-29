@@ -1,13 +1,13 @@
 .github
 .vscode
 examples
-src
 tests
 .editorconfig
 .gitattributes
 .gitignore
 .npmrc
 .prettierrc
+.prettierignore
 .travis.yml
 coffeelint.json
 contribution.md
