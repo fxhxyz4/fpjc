@@ -1,3 +1,3 @@
-const F = require('../lib/fpjc.cjs.js').default;
+const F = require('fpjc-test').default;
 
 console.log(F.t());

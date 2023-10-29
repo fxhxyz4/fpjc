@@ -1,3 +1,3 @@
-import F from '../lib/fpjc.esm.js';
+import F from 'fpjc-test';
 
 console.log(F.t());
