@@ -15,16 +15,24 @@ export default config = {
   output: [
     {
       file: `${path}.js`,
-      format: 'esm',
+      format: 'umd',
+      name: 'F',
+      exports: 'named',
       sourcemap: false,
       banner: banner
     },
     {
-      file: `${path}.cjs`,
+      file: `${path}.cjs.js`,
       format: 'cjs',
+      exports: 'named',
       sourcemap: false,
       banner: banner,
-      exports: 'auto',
+    },
+    {
+      file: `${path}.esm.js`,
+      format: 'esm',
+      sourcemap: false,
+      banner: banner,
     },
   ],
   plugins: [
@@ -44,14 +52,21 @@ path = './lib/min/fpjc';
   config.output = [
     {
       file: `${path}.min.js`,
-      format: 'esm',
+      format: 'umd',
+      name: 'F',
+      exports: 'named',
       sourcemap: false,
     },
     {
-      file: `${path}.min.cjs`,
+      file: `${path}.cjs.min.js`,
       format: 'cjs',
+      exports: 'named',
       sourcemap: false,
-      exports: 'auto',
+    },
+    {
+      file: `${path}.esm.min.js`,
+      format: 'esm',
+      sourcemap: false,
     },
   ]
 }
