@@ -80,9 +80,6 @@
     "rollup-plugin-uglify": "4.0.0",
     "uglify-js": "3.17.4"
   },
-  "engines": {
-    "node": "20.x"
-  },
   "dependencies": {
     "fpjc": "0.0.1"
   }
