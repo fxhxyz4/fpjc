@@ -65,6 +65,7 @@
     "build": "npm run build-dev && npm run build-prod",
     "uglify": "uglifyjs dist/fpjc.min.js -o dist/fpjc.min.js --toplevel",
     "test": "mocha tests/index.test.js"
+    "prod": "./release.sh",
   },
   "devDependencies": {
     "@babel/cli": "7.23.0",
