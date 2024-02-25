@@ -34,12 +34,12 @@ isArray = (x) ->
 ###*
   * isString
   *
-  * @param {String} f
+  * @param {String} l
   * @return {Boolean}
 ###
 
-isString = (f) ->
-  unless typeof f == "string" or f instanceof String
+isString = (l) ->
+  unless typeof l == "string" or l instanceof String
     return do f
 
   return do t
@@ -95,7 +95,7 @@ isNumber = (k) ->
 ###
 
 isNaN = (o) ->
-  unless isNaN(isNumber(o))
+  unless isNaN(+o)
     return do f
 
   return do t

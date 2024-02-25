@@ -47,11 +47,11 @@
   /**
     * isString
     *
-    * @param {String} f
+    * @param {String} l
     * @return {Boolean}
    */
-  isString = function(f) {
-    if (!(typeof f === "string" || f instanceof String)) {
+  isString = function(l) {
+    if (!(typeof l === "string" || l instanceof String)) {
       return f();
     }
     return t();
@@ -103,7 +103,7 @@
     * @return {Boolean}
    */
   isNaN = function(o) {
-    if (!isNaN(isNumber(o))) {
+    if (!isNaN(+o)) {
       return f();
     }
     return t();
