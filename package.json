@@ -1,5 +1,5 @@
 {
-  "name": "fpjc",
+  "name": "fpjc-test",
   "version": "0.0.1",
   "description": "Functional utilities library for javascript",
   "keywords": [
@@ -84,6 +84,6 @@
     "node": "20.x"
   },
   "dependencies": {
-    "fpjc": "0.0.1"
+    "fpjc-test": "0.0.1"
   }
 }
