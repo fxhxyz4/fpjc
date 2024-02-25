@@ -1,6 +1,6 @@
 /**
-* @F fpjc v0.0.0
-* @F (c)2023 fxhxyz
+* @F fpjc v0.0.1
+* @F (c)2024 fxhxyz
 * @F MIT License
 * @F github.com/fxhxyz4/fpjc
 */
