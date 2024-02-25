@@ -38,9 +38,9 @@
    */
   isArray = function(x) {
     if (!(Array.isArray(x) || x instanceof Array)) {
-      throw new Error(`Typeof: ${typeof x}`);
+      return f();
     }
-    return f();
+    return t();
   };
 
   // =======================================================
@@ -52,8 +52,9 @@
    */
   isString = function(f) {
     if (!(typeof f === "string" || f instanceof String)) {
-      throw new Error(`Typeof: ${typeof f}`);
+      return f();
     }
+    return t();
   };
 
   // =======================================================
@@ -64,8 +65,9 @@
    */
   isUndefined = function(x) {
     if (typeof x !== "undefined") {
-      throw new Error(`Typeof: ${typeof x}`);
+      return f();
     }
+    return t();
   };
 
   // =======================================================
@@ -76,8 +78,9 @@
    */
   isObject = function(w) {
     if (Object.prototype.toString.call(w) !== "[object Object]") {
-      throw new Error(`Typeof: ${typeof w}`);
+      return f();
     }
+    return t();
   };
 
   // =======================================================
@@ -88,8 +91,9 @@
    */
   isNumber = function(k) {
     if (typeof +k !== 'number') {
-      throw new Error(`Typeof: ${typeof k}`);
+      return f();
     }
+    return t();
   };
 
   // =======================================================
@@ -99,9 +103,10 @@
     * @return {Boolean}
    */
   isNaN = function(o) {
-    if (!isNaN(isNUmber(o))) {
-      throw new Error(`Typeof: ${typeof o}`);
+    if (!isNaN(isNumber(o))) {
+      return f();
     }
+    return t();
   };
 
   // =======================================================

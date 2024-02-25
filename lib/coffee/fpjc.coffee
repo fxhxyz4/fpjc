@@ -25,10 +25,9 @@ f = -> false
 
 isArray = (x) ->
   unless Array.isArray(x) or x instanceof Array
-    throw new Error "Typeof: #{typeof x}"
-    return do t
+    return do f
 
-  return do f
+  return do t
 
 # =======================================================
 
@@ -41,7 +40,9 @@ isArray = (x) ->
 
 isString = (f) ->
   unless typeof f == "string" or f instanceof String
-    throw new Error "Typeof: #{typeof f}"
+    return do f
+
+  return do t
 
 # =======================================================
 
@@ -53,7 +54,9 @@ isString = (f) ->
 
 isUndefined = (x) ->
   unless typeof x == "undefined"
-    throw new Error "Typeof: #{typeof x}"
+    return do f
+
+  return do t
 
 # =======================================================
 
@@ -65,7 +68,9 @@ isUndefined = (x) ->
 
 isObject = (w) ->
   unless Object.prototype.toString.call(w) == "[object Object]"
-    throw new Error "Typeof: #{typeof w}"
+    return do f
+
+  return do t
 
 # =======================================================
 
@@ -77,7 +82,9 @@ isObject = (w) ->
 
 isNumber = (k) ->
   unless typeof +k == 'number'
-    throw new Error "Typeof: #{typeof k}"
+    return do f
+
+  return do t
 
 # =======================================================
 
@@ -88,8 +95,10 @@ isNumber = (k) ->
 ###
 
 isNaN = (o) ->
-  unless isNaN(isNUmber(o))
-      throw new Error "Typeof: #{typeof o}"
+  unless isNaN(isNumber(o))
+    return do f
+
+  return do t
 
 # =======================================================
 
