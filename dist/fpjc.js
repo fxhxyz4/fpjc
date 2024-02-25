@@ -40,6 +40,7 @@
     if (!(Array.isArray(x) || x instanceof Array)) {
       throw new Error(`Typeof: ${typeof x}`);
     }
+    return f();
   };
 
   // =======================================================

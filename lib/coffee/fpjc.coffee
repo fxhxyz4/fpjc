@@ -26,6 +26,9 @@ f = -> false
 isArray = (x) ->
   unless Array.isArray(x) or x instanceof Array
     throw new Error "Typeof: #{typeof x}"
+    return do t
+
+  return do f
 
 # =======================================================
 
