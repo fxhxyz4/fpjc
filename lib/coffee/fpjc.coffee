@@ -25,7 +25,7 @@ f = -> false
 
 isArray = (x) ->
   unless x Array.isArray(x) or x instanceof Array
-      throw new Error "Typeof: #{typeof x}"
+    throw new Error "Typeof: #{typeof x}"
 
 # =======================================================
 
@@ -38,7 +38,7 @@ isArray = (x) ->
 
 isString = (f) ->
   unless typeof f == "string" or f instanceof String
-      throw new Error "Typeof: #{typeof f}"
+    throw new Error "Typeof: #{typeof f}"
 
 # =======================================================
 
@@ -50,7 +50,7 @@ isString = (f) ->
 
 isUndefined = (x) ->
   unless typeof x == "undefined"
-      throw new Error "Typeof: #{typeof x}"
+    throw new Error "Typeof: #{typeof x}"
 
 # =======================================================
 
@@ -61,8 +61,8 @@ isUndefined = (x) ->
 ###
 
 isObject = (w) ->
-  unless typeof w == "object"
-      throw new Error "Typeof: #{typeof w}"
+  Object.prototype.toString.call(w) === "[object Object]"
+    throw new Error "Typeof: #{typeof w}"
 
 # =======================================================
 
@@ -74,7 +74,19 @@ isObject = (w) ->
 
 isNumber = (k) ->
   unless typeof +k == 'number'
-      throw new Error "Typeof: #{typeof k}"
+    throw new Error "Typeof: #{typeof k}"
+
+# =======================================================
+
+###*
+  * isNaN
+  *
+  * @return {Boolean}
+###
+
+isNaN = (o) ->
+  unless isNaN(isNUmber(o))
+      throw new Error "Typeof: #{typeof o}"
 
 # =======================================================
 
@@ -441,6 +453,12 @@ reverse = (o) ->
 F = {
   t
   f
+  isArray
+  isString
+  isUndefined
+  isObject
+  isNumber
+  isNaN
   basic
   add
   divide
