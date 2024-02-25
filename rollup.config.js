@@ -1,6 +1,7 @@
 import pkg from './package.json' assert { type: "json" };
 import coffee from 'rollup-plugin-coffee-script';
 import { uglify } from "rollup-plugin-uglify";
+import process from 'node:process';
 
 let banner = `/**\n* @F fpjc v${pkg.version}\n`
   + `* @F (c)${new Date().getFullYear()} fxhxyz\n`
