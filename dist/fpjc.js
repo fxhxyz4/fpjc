@@ -15,7 +15,7 @@
   /**
     * @return {Boolean} true
    */
-  var F, add, basic, ceil, ceil2, divide, drop, every, f, floor, floor2, floorCeilRound, highOrderFunc, multiply, power, random1, random2, random3, random4, random5, reverse, round, round2, some, squareRoot, subtract, t, take, takeOrDrop;
+  var F, add, basic, ceil, ceil2, divide, drop, every, f, floor, floor2, floorCeilRound, highOrderFunc, isArray, isNaN, isNumber, isObject, isString, isUndefined, multiply, power, random1, random2, random3, random4, random5, reverse, round, round2, some, squareRoot, subtract, t, take, takeOrDrop;
 
   t = function() {
     return true;
@@ -27,6 +27,80 @@
    */
   f = function() {
     return false;
+  };
+
+  // =======================================================
+  /**
+    * isArray
+    *
+    * @param {Array} x
+    * @return {Boolean}
+   */
+  isArray = function(x) {
+    if (!x(Array.isArray(x) || x instanceof Array)) {
+      throw new Error(`Typeof: ${typeof x}`);
+    }
+  };
+
+  // =======================================================
+  /**
+    * isString
+    *
+    * @param {String} f
+    * @return {Boolean}
+   */
+  isString = function(f) {
+    if (!(typeof f === "string" || f instanceof String)) {
+      throw new Error(`Typeof: ${typeof f}`);
+    }
+  };
+
+  // =======================================================
+  /**
+    * isUndefined
+    *
+    * @return {Boolean}
+   */
+  isUndefined = function(x) {
+    if (typeof x !== "undefined") {
+      throw new Error(`Typeof: ${typeof x}`);
+    }
+  };
+
+  // =======================================================
+  /**
+    * isObject
+    *
+    * @return {Boolean}
+   */
+  isObject = function(w) {
+    if (Object.prototype.toString.call(w) !== "[object Object]") {
+      throw new Error(`Typeof: ${typeof w}`);
+    }
+  };
+
+  // =======================================================
+  /**
+    * isNumber
+    *
+    * @return {Boolean}
+   */
+  isNumber = function(k) {
+    if (typeof +k !== 'number') {
+      throw new Error(`Typeof: ${typeof k}`);
+    }
+  };
+
+  // =======================================================
+  /**
+    * isNaN
+    *
+    * @return {Boolean}
+   */
+  isNaN = function(o) {
+    if (!isNaN(isNUmber(o))) {
+      throw new Error(`Typeof: ${typeof o}`);
+    }
   };
 
   // =======================================================
@@ -394,7 +468,7 @@
   };
 
   // =======================================================
-  F = {t, f, basic, add, divide, multiply, power, random1, random2, random3, random4, random5, squareRoot, subtract, floorCeilRound, ceil, ceil2, round, round2, floor, floor2, takeOrDrop, take, drop, reverse, some, every, highOrderFunc};
+  F = {t, f, isArray, isString, isUndefined, isObject, isNumber, isNaN, basic, add, divide, multiply, power, random1, random2, random3, random4, random5, squareRoot, subtract, floorCeilRound, ceil, ceil2, round, round2, floor, floor2, takeOrDrop, take, drop, reverse, some, every, highOrderFunc};
 
   var F$1 = F;
 
