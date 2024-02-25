@@ -61,7 +61,7 @@ isUndefined = (x) ->
 ###
 
 isObject = (w) ->
-  Object.prototype.toString.call(w) === "[object Object]"
+  unless Object.prototype.toString.call(w) == "[object Object]"
     throw new Error "Typeof: #{typeof w}"
 
 # =======================================================
