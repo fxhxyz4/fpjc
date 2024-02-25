@@ -17,6 +17,68 @@ f = -> false
 # =======================================================
 
 ###*
+  * isArray
+  *
+  * @param {Array} x
+  * @return {Boolean}
+###
+
+isArray = (x) ->
+  unless x Array.isArray(x) or x instanceof Array
+      throw new Error "Typeof: #{typeof x}"
+
+# =======================================================
+
+###*
+  * isString
+  *
+  * @param {String} f
+  * @return {Boolean}
+###
+
+isString = (f) ->
+  unless typeof f == "string" or f instanceof String
+      throw new Error "Typeof: #{typeof f}"
+
+# =======================================================
+
+###*
+  * isUndefined
+  *
+  * @return {Boolean}
+###
+
+isUndefined = (x) ->
+  unless typeof x == "undefined"
+      throw new Error "Typeof: #{typeof x}"
+
+# =======================================================
+
+###*
+  * isObject
+  *
+  * @return {Boolean}
+###
+
+isObject = (w) ->
+  unless typeof w == "object"
+      throw new Error "Typeof: #{typeof w}"
+
+# =======================================================
+
+###*
+  * isNumber
+  *
+  * @return {Boolean}
+###
+
+isNumber = (k) ->
+  unless typeof +k == 'number'
+      throw new Error "Typeof: #{typeof k}"
+
+# =======================================================
+
+###*
   * Is a utility function that can be used to perform
   * various mathematical operations on arrays of numbers.
   *
