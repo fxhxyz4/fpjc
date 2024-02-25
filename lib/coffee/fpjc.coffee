@@ -24,7 +24,7 @@ f = -> false
 ###
 
 isArray = (x) ->
-  unless x Array.isArray(x) or x instanceof Array
+  unless Array.isArray(x) or x instanceof Array
     throw new Error "Typeof: #{typeof x}"
 
 # =======================================================

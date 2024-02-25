@@ -37,7 +37,7 @@
     * @return {Boolean}
    */
   isArray = function(x) {
-    if (!x(Array.isArray(x) || x instanceof Array)) {
+    if (!(Array.isArray(x) || x instanceof Array)) {
       throw new Error(`Typeof: ${typeof x}`);
     }
   };
