@@ -89,12 +89,12 @@ isNumber = (k) ->
 # =======================================================
 
 ###*
-  * NaN
+  * isNaN
   *
   * @return {Boolean}
 ###
 
-NaN = (o) ->
+isNaN = (o) ->
   unless isNaN(+o)
     return do f
 
@@ -470,7 +470,7 @@ F = {
   isUndefined
   isObject
   isNumber
-  NaN
+  isNaN
   basic
   add
   divide
