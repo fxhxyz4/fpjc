@@ -67,7 +67,7 @@
     "test": "mocha tests/index.test.js"
   },
   "devDependencies": {
-    "@babel/cli": "7.23.0",
+    "@babel/cli": "7.26.4",
     "@babel/core": "7.23.2",
     "@babel/preset-env": "7.23.2",
     "@coffeelint/cli": "^5.2.11",
