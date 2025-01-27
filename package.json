@@ -68,7 +68,7 @@
   },
   "devDependencies": {
     "@babel/cli": "7.23.0",
-    "@babel/core": "7.23.2",
+    "@babel/core": "7.26.7",
     "@babel/preset-env": "7.23.2",
     "@coffeelint/cli": "^5.2.11",
     "chai": "4.3.10",
