@@ -73,7 +73,7 @@
     "@coffeelint/cli": "^5.2.11",
     "chai": "4.3.10",
     "coffeescript": "2.7.0",
-    "mocha": "10.2.0",
+    "mocha": "10.8.2",
     "prettier-plugin-coffeescript": "^0.1.5",
     "rollup": "4.1.4",
     "rollup-plugin-coffee-script": "2.0.0",
